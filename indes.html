@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Nágela Almeida</title>
+    <style>
+         /* Reset de estilos padrão */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imagens/fundo.gif'); /* Caminho da imagem de fundo */
+            background-position: center center; /* A imagem é centralizada */
+            background-attachment: fixed; /* A imagem fica fixa ao rolar */
+            color: #fff; /* Texto em branco para contrastar com a imagem */
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: rosybrown; /* Cor de fundo com opacidade */
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* Slider de Imagens */
+        .slider-container {
+            position: relative;
+            max-width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            flex-shrink: 0;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            border-radius: 20px;
+        }
+
+        .image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+
+        /* Corrigindo a posição do texto .caption */
+        .caption {
+            position: absolute; /* Posiciona o texto em relação ao slide */
+            bottom: 20px; /* Ajusta o texto para o fundo da imagem */
+            left: 20px; /* Lateral esquerda */
+            right: 20px; /* Lateral direita */
+            color: black;
+            font-size: 20px;
+            font-weight: bolder;
+            background-color: #aaaaaa; /* Fundo translúcido */
+            padding: 10px 15px; /* Aumentei o espaçamento interno */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-sizing: border-box; /* Garante que o padding não afete a largura total */
+            z-index: 1; /* Garante que o texto fique acima da imagem */
+        }
+
+        /* Setas de navegação */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            z-index: 2; /* Garante que as setas fiquem acima da imagem */
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .texto {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #fff;
+            font-style: arial;
+        }
+    
+        /* Relógio */
+        .relogio {
+            font-size: 24px;
+            margin-top: 40px;
+            color: rosybrown;
+        }
+
+        #contador {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #ffffff;
+            border-radius: #ffffff;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 50px;
+            font-size: 16px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style=" color: yellow;">André Camurça e Nágela Almeida</h1>
+    </header>
+
+    <section class="content">
+        <div class="texto">
+            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 40px;">Fiz esta pequena página utilizando html, css e javascript, com foco em nós!<br></h2>
+            <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 40px;">Na intenção de deixar registrado alguns momentos nossos, e claro, de lhe surpreender, espero obter êxito nessa questão haha<br></h2>
+            <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 50px;">Te amo S2</h1>
+        </div>
+
+        <!-- Slider de Imagens -->
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide">
+                    <img src="imagens/comeco.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">12/05/2024 - creio que foi onde tudo começou, com uma pequena curtida durante o dia, e uma leve troca de olhares durante à noite.</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-1.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">18/05/2024 - dia de nossa primeira tentativa de tirar foto juntos, após um culto de jovens, estavámos nos conhecendo, aquela velha conversa naquela mesa de jantar kkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-2.jpg" alt="Imagem 2" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 600px;">18/05/2024 - depois de várias tentativas, até que enfim a foto deu certo, com seu lindo e maravilhoso, "rostinho de Jesus" rs!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/luzvelas.jpg" alt="Imagem 3" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">23/05/2024 - jantarzinho a luz de velas improvisado kkkk! faltou luz do nada também</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-3.jpg" alt="Imagem 3" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 0px;">27/05/2024 - acho que é uma das fotos mais lindas nossas, e creio que seja a mais especial, 1º dia de namoro, um belo açaí, no local onde nos vimos pela 1ª vez, justamente com estas vestimentas kkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/macarrao.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">04/06/2024 - jantinha com aquele belo macarrão que você "amava" kkkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/jantar.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">08/06/2024 - agora aqui é uma senhora janta!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-4.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">14/06/2024 - uma chamada de vídeo contendo muita saudade um do outro, naquele sábado, onde eu tive a audácia de tirar a barba, e deu pra ver sua reação "bem positiva" em relação à isso kkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-5.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">17/06/2024 - você havia acabado de chegar de viagem, nos presenteamos com presentes do dia dos namorados, te esperava ansiosamente, e não curtiu muito quando viu seu bebê sem barba, de fato, parecia um bebê mesmo kkkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-6.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">17/06/2024 - ainda naquele mesmo dia, saímos para comer algo diferente, no ponto da codorna, você estava magnificamente linda e perfeita, sem condições. ô casal lindo haha</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-7.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">17/06/2024 - essa foto só não ficou melhor pq eu estava sem minha maquiagem, a "barba" kkkk!parece que esse dia foi o dia das fotos kkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/merenda.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">18/06/2024 - uma merenda de qualidade preparada por ela, bolo top, com pães de queijo, e ela com seu cappuccino.</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-8.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">11/07/2024 - nossas conversas na calçada da crefácil kkkk! onde foi de fato nosso primeiro encontro.</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/bolo.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">15/07/2024 - meio duvidoso aí né, mas pior que tava bom oh, só passou uns 10 dias dentro da geladeira kkkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-9.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">06/08/2024 - nem sempra queria tirar foto, dizendo que não tava com "rostinho de Jesus", mas sempre com brilho haha</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-10.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">10/08/2024 - esta foto, esta magnifica foto, após um ótimo culto ao Senhor na Curupira, sem condições, que casal lindo Jesus!!!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-11.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">11/08/2024 - um domingo à noite, após o culto, cada fazendo suas atividades, esta foto realça um comprometimento que cada um tem com o futuro.</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/comida.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">13/08/2024 - a masterchef ataca mais uma vez, palmas para esta macarronada!!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-12.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">14/08/2024 - corridinha de leve as 06:00h da manhã pra queimar as calorias da macarronada kkkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-13.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">17/08/2024 - uma partidinha de uno para desestressar, ou parece que não kkkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-14.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">14/09/2024 - chamadinha de vídeo, um longe do outro, com ela me olhando como se eu fosse um prato de comida haha</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/scob.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">21/09/2024 - esse é o scooby!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-15.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">25/09/2024 - essa família é muito unida kkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/banho.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">26/09/2024 - primeiro banho do nosso bebê, fedorento kkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-16.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">29/09/2024 - passeio em família? bem que poderia ser, mas é só o scooby voltando pra casa após ser expulso do condomínio kkkk!</div>
+                </div>
+                <div class="slide">
+                    <img src="imagens/image-17.jpg" alt="Imagem 1" class="image" style="border-color: #fff; border-style: solid;">
+                    <div class="caption" style="bottom: 250px;">01/09/2024 - prestigiando o belo debate eleitoral de Ocara, "são 20 anos!"</div>
+                </div>                
+            </div>
+            <button class="prev" onclick="moverSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moverSlide(1)">&#10095;</button>
+        </div>
+
+        <div id="relogio" class="relogio">
+            <h2>Tempo juntos:</h2>
+            <p id="contador"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 - Criado com carinho para você!</p>
+    </footer>
+
+    <script>
+        // Slider de imagens
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const slider = document.getElementById('slider');
+
+        function moverSlide(n) {
+            slideIndex += n;
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            } else if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            slider.style.transform = `translateX(-${100 * slideIndex}%)`;
+        }
+
+        // Função de toque (swipe)
+        let startX;
+        let endX;
+
+        slider.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        slider.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            if (startX > endX + 50) {
+                moverSlide(1); // Deslizar para a direita
+            } else if (startX < endX - 50) {
+                moverSlide(-1); // Deslizar para a esquerda
+            }
+        });
+
+        // Data inicial - 26 de maio de 2024
+        const dataInicial = new Date("2024-05-26T00:00:00");
+
+        // Função para atualizar o relógio
+        function atualizarRelogio() {
+            const agora = new Date();
+            const tempoJunto = agora - dataInicial; // Tempo em milissegundos
+
+            const dias = Math.floor(tempoJunto / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((tempoJunto % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((tempoJunto % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((tempoJunto % (1000 * 60)) / 1000);
+
+            // Exibindo no formato desejado
+            document.getElementById("contador").innerHTML = `${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
+        }
+
+        // Atualiza o relógio a cada segundo
+        setInterval(atualizarRelogio, 1000);
+    </script>
+</body>
+</html>
